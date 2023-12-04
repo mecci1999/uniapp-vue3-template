@@ -57,6 +57,9 @@
     "list": [{
       "pagePath": "pages/tab/home/index",
       "text": "首页"
+    },{
+      "pagePath": "pages/tab/list/index",
+      "text": "列表"
     }, {
       "pagePath": "pages/tab/user/index",
       "text": "我的"

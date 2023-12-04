@@ -1,45 +1,41 @@
 <template>
-  <view class="app-user">
-    <u-navbar
-      bgColor="#ef3741"
-      title="我的"
-      titleStyle="color: #ffffff"
-      placeholder
-      left-icon="arrow-left"
-      leftIconColor="#ffffff"
-    />
-    <!-- 头部 -->
-    <view class="app-user__header">
-      <view class="app-user__header-avatar">
-        <up-avatar :src="user.avatar" size="60" shape="circle"></up-avatar>
+  <view class="page-wrap">
+    <u-navbar title="" placeholder left-icon="" right-icon="camera-fill" />
+    <view class="flex items-center bg-white pb-30rpx pl-30rpx pr-20rpx">
+      <view class="mr-10rpx">
+        <u-avatar src="/static/images/logo.png" size="70" />
       </view>
-      <view class="app-user__header-name">
-        <up-text :text="user.name || '未登录'" :color="'#FFFFFF'" size="18" @click="handleLogin"> </up-text>
+      <view class="flex-1">
+        <view class="pb-20rpx font-size-18rpx"> uni-app </view>
+        <view class="u-tips-color font-size-14rpx"> 微信号:uni-app </view>
       </view>
+      <view class="ml-10rpx p-10rpx">
+        <u-icon name="scan" color="#969799" />
+      </view>
+      <view class="ml-10rpx p-10rpx">
+        <u-icon name="arrow-right" color="#969799" />
+      </view>
+    </view>
+
+    <view class="mt-20rpx bg-white">
+      <u-cell-group>
+        <u-cell icon="rmb-circle" title="支付" is-link />
+      </u-cell-group>
+    </view>
+
+    <view class="mt-20rpx bg-white">
+      <u-cell-group>
+        <u-cell icon="star" title="收藏" is-link />
+        <u-cell icon="photo" title="相册" is-link />
+        <u-cell icon="coupon" title="卡券" is-link />
+        <u-cell icon="heart" title="关注" is-link />
+      </u-cell-group>
+    </view>
+
+    <view class="mt-20rpx bg-white">
+      <u-cell-group>
+        <u-cell icon="setting" title="设置" is-link />
+      </u-cell-group>
     </view>
   </view>
 </template>
-
-<script setup lang="ts">
-const user = reactive({
-  name: '',
-  avatar: ''
-});
-
-/**
- * 处理微信登录
- */
-const handleLogin = () => {
-  // 微信授权登录
-  uni.login({
-    provider: 'weixin', //使用微信登录
-    success: function (loginRes) {
-      console.log(loginRes.authResult);
-    }
-  });
-};
-</script>
-
-<style lang="scss">
-@import './index';
-</style>
