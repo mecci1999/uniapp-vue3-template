@@ -1,11 +1,6 @@
 import { defineStore } from 'pinia';
 import type { UserState, providerType } from './types';
-import {
-  getUserProfile,
-  loginByCode,
-  login as userLogin,
-  logout as userLogout,
-} from '@/api/user/index';
+import { getUserProfile, loginByCode, login as userLogin, logout as userLogout } from '@/api/user/index';
 import { clearToken, setToken } from '@/utils/auth';
 import type { LoginParams } from '@/api/user/types';
 
@@ -14,12 +9,12 @@ const useUserStore = defineStore('user', {
     user_id: '',
     user_name: '江阳小道',
     avatar: '',
-    token: '',
+    token: ''
   }),
   getters: {
     userInfo(state: UserState): UserState {
       return { ...state };
-    },
+    }
   },
   actions: {
     // 设置用户的信息
@@ -46,7 +41,7 @@ const useUserStore = defineStore('user', {
           }
           resolve(result);
         } catch (error) {
-          reject(error)
+          reject(error);
         }
       });
     },
@@ -62,6 +57,8 @@ const useUserStore = defineStore('user', {
         uni.login({
           provider,
           success: async (result: UniApp.LoginRes) => {
+            console.log(result);
+
             if (result.code) {
               const res = await loginByCode({ code: result.code });
               resolve(res);
@@ -72,11 +69,11 @@ const useUserStore = defineStore('user', {
           fail: (err: any) => {
             console.error(`login error: ${err}`);
             reject(err);
-          },
+          }
         });
       });
-    },
-  },
+    }
+  }
 });
 
 export default useUserStore;

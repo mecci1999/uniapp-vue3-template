@@ -2,7 +2,11 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #eef2fa;
+  background-color: #f6f6f6;
+
+  .u-navbar__content__title {
+    font-family: PingFang-Regular;
+  }
 
   &__header {
     // width: 100%;

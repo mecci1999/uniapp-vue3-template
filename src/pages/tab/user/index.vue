@@ -21,6 +21,8 @@
 </template>
 
 <script setup lang="ts">
+import useUserStore from '@/store/modules/user';
+
 const user = reactive({
   name: '',
   avatar: ''
@@ -29,14 +31,9 @@ const user = reactive({
 /**
  * 处理微信登录
  */
-const handleLogin = () => {
+const handleLogin = async () => {
   // 微信授权登录
-  uni.login({
-    provider: 'weixin', //使用微信登录
-    success: function (loginRes) {
-      console.log(loginRes.authResult);
-    }
-  });
+  await useUserStore().authLogin();
 };
 </script>
 
