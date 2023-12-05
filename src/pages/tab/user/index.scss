@@ -36,14 +36,14 @@
 
   &__card {
     // height: 44px;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 0 16px;
 
     &-item {
       height: 100%;
       padding: 10px 12px;
       background-color: #ffffff;
-      border-radius: 8px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
 
@@ -66,6 +66,133 @@
       &-icon {
         width: 16px;
         height: 16px;
+      }
+    }
+  }
+
+  &__orders {
+    margin-top: 16px;
+    padding: 0 16px;
+
+    &-container {
+      height: 100%;
+      padding: 10px 12px;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+
+      &-name {
+        font-family: PingFangSC-Regular;
+        font-weight: 500;
+        color: #000000;
+        font-size: 16px;
+        line-height: 16px;
+        flex: 1;
+      }
+
+      &-text {
+        font-family: PingFangSC-Regular;
+        color: #a8a8a8;
+        font-size: 12px;
+      }
+
+      &-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &-body {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 24px;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      &-icon {
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        &.collection {
+          background-image: url('@/static/icon/user/collection.svg');
+        }
+
+        &.shipments {
+          background-image: url('@/static/icon/user/shipments.svg');
+        }
+
+        &.receipt {
+          background-image: url('@/static/icon/user/receipt.svg');
+        }
+
+        &.after {
+          background-image: url('@/static/icon/user/after.svg');
+        }
+      }
+
+      &-text {
+        margin-top: 8px;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 12px;
+        color: rgba(50, 50, 51, 1);
+        text-align: center;
+      }
+
+      &-num {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #ea4c3e;
+        color: #ffffff;
+        font-size: 12px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__settings {
+    margin-top: 16px;
+    padding: 0 16px;
+
+    &-container {
+      height: 100%;
+      padding: 10px 12px;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+
+    &-item {
+      height: 56px;
+      display: flex;
+      align-items: center;
+
+      &-text {
+        font-family: PingFangSC-Regular;
+        font-weight: 500;
+        color: #000000;
+        font-size: 16px;
+        line-height: 16px;
+        flex: 1;
       }
     }
   }
