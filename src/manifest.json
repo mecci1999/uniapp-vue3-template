@@ -60,7 +60,12 @@
     {
       "urlCheck": false
     },
-    "usingComponents": true
+    "usingComponents": true,
+    "permissions": {
+      "scope.userInfo": {
+        "desc": "需要获取您当前微信账号的信息"
+      }
+    }
   },
   "mp-alipay":
   {

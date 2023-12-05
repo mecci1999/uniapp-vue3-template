@@ -15,6 +15,24 @@
       }
     },
     {
+      "path": "pages/tab/car/index",
+      "style": {
+        "navigationBarTitleText": "购物车"
+      }
+    },
+    {
+      "path": "pages/tab/categary/index",
+      "style": {
+        "navigationBarTitleText": "分类"
+      }
+    },
+    {
+      "path": "pages/tab/message/index",
+      "style": {
+        "navigationBarTitleText": "消息"
+      }
+    },
+    {
       "path": "pages/tab/list/index",
       "style": {
         "navigationBarTitleText": "列表"
@@ -56,10 +74,29 @@
     "backgroundColor": "#ffffff",
     "list": [{
       "pagePath": "pages/tab/home/index",
-      "text": "首页"
+      "text": "首页",
+      "iconPath": "static/icon/tabBar/home.png",
+      "selectedIconPath": "static/icon/tabBar/home-selected.png"
+    },{
+      "pagePath": "pages/tab/categary/index",
+      "text": "分类",
+      "iconPath": "static/icon/tabBar/categary.png",
+      "selectedIconPath": "static/icon/tabBar/categary-selected.png"
+    },{
+      "pagePath": "pages/tab/message/index",
+      "text": "消息",
+      "iconPath": "static/icon/tabBar/message.png",
+      "selectedIconPath": "static/icon/tabBar/message-selected.png"
+    },{
+      "pagePath": "pages/tab/car/index",
+      "text": "购物车",
+      "iconPath": "static/icon/tabBar/shoppingCar.png",
+      "selectedIconPath": "static/icon/tabBar/shoppingCar-selected.png"
     }, {
       "pagePath": "pages/tab/user/index",
-      "text": "我的"
+      "text": "我的",
+      "iconPath": "static/icon/tabBar/user.png",
+      "selectedIconPath": "static/icon/tabBar/user-selected.png"
     }]
   },
   "globalStyle": {

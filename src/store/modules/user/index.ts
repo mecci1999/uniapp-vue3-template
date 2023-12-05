@@ -7,7 +7,7 @@ import type { LoginParams } from '@/api/user/types';
 const useUserStore = defineStore('user', {
   state: (): UserState => ({
     user_id: '',
-    user_name: '江阳小道',
+    user_name: '',
     avatar: '',
     token: ''
   }),
@@ -60,7 +60,10 @@ const useUserStore = defineStore('user', {
             console.log(result);
 
             if (result.code) {
+              // 将获取到的code发送给服务端，服务端将拿到的openId和session_token存储起来，并定义一个自定义登录态返回给小程序端
               const res = await loginByCode({ code: result.code });
+              // 将拿到的登录态存储在小程序端，用户可以通过该登录态去调用服务端接口获取其他数据
+
               resolve(res);
             } else {
               reject(new Error(result.errMsg));

@@ -18,3 +18,7 @@ title.value = import.meta.env.VITE_APP_TITLE;
 const store = useUserStore();
 console.log('store.user_name', store.user_name);
 </script>
+
+<style lang="scss">
+@import './index';
+</style>
